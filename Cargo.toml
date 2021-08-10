@@ -1,0 +1,15 @@
+[package]
+name = "prom_health_check"
+version = "0.1.0"
+authors = ["Vyacheslav Tverskoy <tsx@tsx.su>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ureq = { version = "2.1", default-features = false }
+nom = { version = "6" }
+clap = { version = "2"}
+
+[profile.release]
+lto = true
