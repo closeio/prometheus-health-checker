@@ -20,6 +20,10 @@ Intended to use with kubernetes or docker-compose.
 
 `prom_health_check --check-up cio_service_state --check-fresh last_iteration_time --fresh-for 300`
 
+# Build
+
+`cargo build --release` will output the binary to `target/release/prom_health_check`
+
 # Usage
 
 (run with --help) to get the same
