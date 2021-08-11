@@ -16,3 +16,8 @@ jobs:
       run: cargo test
     - name: Build
       run: cargo build --release
+    - name: Upload released binary
+      uses: actions/upload-artifact@v2
+      with:
+        name: prom_health_check
+        path: target/release/prom_health_check
