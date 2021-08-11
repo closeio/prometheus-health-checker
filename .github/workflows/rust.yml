@@ -1,0 +1,23 @@
+name: Rust
+
+on: push
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run tests
+      run: cargo test
+    - name: Build
+      run: cargo build --release
+    - name: Upload released binary
+      uses: actions/upload-artifact@v2
+      with:
+        name: prom_health_check
+        path: target/release/prom_health_check
